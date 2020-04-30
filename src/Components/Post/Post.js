@@ -1,9 +1,9 @@
 import React from "react";
 import "./Post.css";
-export default function Post() {
+export default function Post(props) {
   return (
     <article className="Post">
-      <h1>Title</h1>
+      <h1>{props.title}</h1>
       <div className="Info">
         <div className="Author">Author</div>
       </div>
