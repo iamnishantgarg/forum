@@ -6,14 +6,19 @@ export default class FullPost extends Component {
     loadedPost: null,
   };
 
-  componentDidUpdate() {
-    if (this.props.id) {
+  componentDidMount() {
+    // console.log(this.props );
+
+    if (this.props.match.params.id) {
       if (
         (this.state.loadedPost && this.state.loadedPost.id !== this.props.id) ||
         this.state.loadedPost == null
       ) {
         axios
-          .get("https://jsonplaceholder.typicode.com/posts/" + this.props.id)
+          .get(
+            "https://jsonplaceholder.typicode.com/posts/" +
+              this.props.match.params.id
+          )
           .then((res) => {
             console.log(res.data);
             this.setState({ loadedPost: res.data });
