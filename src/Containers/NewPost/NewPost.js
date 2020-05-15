@@ -6,7 +6,7 @@ class NewPost extends Component {
   state = {
     title: "",
     content: "",
-    author: "Max",
+    author: "Nishant",
   };
   AddPostHandler = () => {
     // console.log("clicked");
@@ -41,8 +41,8 @@ class NewPost extends Component {
           value={this.state.author}
           onChange={(event) => this.setState({ author: event.target.value })}
         >
-          <option value="Max">Max</option>
-          <option value="Manu">Manu</option>
+          <option value="Nishant">Nishant</option>
+          <option value="Only Nishant">Only Nishant</option>
         </select>
         <button onClick={this.AddPostHandler}>Add Post</button>
       </div>
